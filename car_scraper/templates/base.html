@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <style type="text/css">
+            body{
+                width: 100%;
+            }
+            .top{
+                margin: 0 auto;
+                width: 860px;
+            }
+            .detail-box{
+                width: 845px;
+                border: 1px solid #000000;
+            }
+            .div-img{
+                float: left;
+                width: 200px;
+            }
+            .div-details{
+                float: left;
+                width: 640px;
+            }
+            .info-line{ width: 620px; float: right;}
+            .column-left{ width: 90px; float: left; font-weight: bold;}
+            .clear{ clear: both;}
+        </style>
+    </head>
+    
+    <body>
+        <div class="top">
+       {% block main_body%}
+       {% endblock %}
+       </div>
+    </body>
+</html>

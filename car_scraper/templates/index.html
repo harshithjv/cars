@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block main_body %}
+    {% if not cars %}
+        <h2>Nothing in database.</h2>
+    {% else %}
+        {% for car in cars %}
+            <div class="detail-box">
+                <div class="div-img">
+                    <img src="{{ car.img_link1 }}">
+                </div>
+                <div class="div-details">
+                    <div class="info-line">
+                        <span class="column-left">Title: </span>{{ car.title }}
+                    </div>
+                    <div class="clear"></div>
+                    <div class="info-line">
+                        <span class="column-left">Price:</span>{{ car.price }}
+                    </div>
+                    <div class="clear"></div>                    
+                    <div class="info-line">
+                        <span class="column-left">Description:</span>{{ car.description|safe }}
+                    </div>
+                    <div class="clear"></div>           
+                    <div class="info-line">
+                        <span class="column-left">Address:</span>{{ car.address }}
+                    </div>
+                    <div class="clear"></div>
+                    <div class="info-line">
+                        <span class="column-left">Dealer:</span>{{ car.dealer }}
+                    </div>
+                    <div class="clear"></div>     
+                    <div class="info-line">
+                        <span class="column-left">Year:</span>{{ car.year }}
+                    </div>
+                    <div class="clear"></div>
+                    <div class="info-line">
+                        <span class="column-left">Body Type:</span>{{ car.bodytype }}
+                    </div>
+                    <div class="clear"></div>
+                    <div class="info-line">
+                        <a href="{{ car.link }}" target="_blank">Click Here for more details ...</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+{% endblock %}
