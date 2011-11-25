@@ -1,0 +1,18 @@
+1. Create MySQL Schema - 'carss'
+
+2. update db:
+
+mysql -u root carss < db.sql
+
+3. Open django shell:
+python manage.py shell
+
+4. in django shell run these commands:
+
+In [1]: from car_scraper.scrapper import store_info
+
+In [2]: url = 'http://saintjohn.kijiji.ca/c-PostersOtherAds-W0QQSortZ3QQUserIdZ64103868'
+
+In [3]: store_info(url)
+
+5. Start the server and test the result in browser with url - http://localhost:8000/
